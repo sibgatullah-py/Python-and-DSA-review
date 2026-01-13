@@ -8,8 +8,9 @@
 
 ## 03. Grade Calculator
     Assign a letter grade based on a student's score: A(100-80), B(79-70), C(69-60), D(59-50), F(bellow 50).
-    
+
 ## 04. Fruit Ripeness Checker
+    Determine if a fruit is unripe, ripe or overripe based on the color
 
 ## 05. Weather Activity Suggestion
 
