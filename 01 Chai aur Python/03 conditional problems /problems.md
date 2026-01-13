@@ -12,11 +12,7 @@
 ## 04. Fruit Ripeness Checker
     Determine if a fruit is unripe, ripe or overripe based on the color
 
-## 05. Weather Activity Suggestion
-
-## 06. Transportation Mode Selection
-
-## 07. Coffee Customization
+## 05. Coffee Customization
 
 ## 08. Password Strength Checker
 
