@@ -7,7 +7,8 @@
     Movie tickets are priced based on age: $12 for adults (18+), $8 for children.Everyone gets a $2 discount on Wednesday
 
 ## 03. Grade Calculator
-
+    Assign a letter grade based on a student's score: A(100-80), B(79-70), C(69-60), D(59-50), F(bellow 50).
+    
 ## 04. Fruit Ripeness Checker
 
 ## 05. Weather Activity Suggestion
