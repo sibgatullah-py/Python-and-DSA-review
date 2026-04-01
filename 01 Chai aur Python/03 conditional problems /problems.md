@@ -14,8 +14,7 @@
 
 ## 05. Coffee Customization
 
-## 08. Password Strength Checker
+## 06. Password Strength Checker
 
-## 09. Leap Year Checker
+## 07. Leap Year Checker
 
-## 10. Pet Food Recommendation
