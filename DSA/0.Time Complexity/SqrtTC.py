@@ -14,4 +14,4 @@ for i in li:
     
 print()
     
-# This code only moves to the root of the number sor it's complexity is O(sqrt(n))
+# This code only moves to the root of the number so it's complexity is O(sqrt(n))
