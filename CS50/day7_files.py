@@ -14,3 +14,8 @@ with open('name.txt','r') as file:
     
 for each in sorted(names):
     print(each)
+    
+    
+    
+
+    

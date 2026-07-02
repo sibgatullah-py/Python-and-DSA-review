@@ -1,0 +1,28 @@
+## FUNCTION
+
+Functions in Python are Block of statements that performs a specific task.
+
+def func_name(param1,param2..):
+    #statements for task
+    return val
+
+functions simplify repeatable(redundant-> Something that is repeating) tasks
+
+#There are two types of functions:->
+ 1. Built in functions:
+ 2. User defined Functions:
+
+*In function parameter we can send default arguments . But when there are two or more arguments
+    the none default argument comes first and default argument comes second.
+    example:
+        def example(nondefault, default=2):
+            pass
+
+
+## RECURSION
+
+When a function calls it's self repeatedly until the requirement is reached.
+
+Return condition of a recursive function is called BASE CASE
+
+Call Stack: One function called over another 
