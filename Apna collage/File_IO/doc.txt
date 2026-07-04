@@ -1,0 +1,26 @@
+This is a demo text. Hello!!le I/O means Input / Output inside a File.
+
+Types of files are 2:
+    1. Text Files : .txt, .docx, .log, .csv etc.
+    2. Binary Files : .mp4, .mov, .png, .jpeg etc.
+
+RAM is a volatile memory . it looses it's memory after completing a task.
+
+r = open for reading (default)
+w = open for writing, truncating the file first
+x = create a new file and open it for writing
+a = open for writing, appending to the end of the file if it exists.
+b = Binary mode
+t = Text mode (default)
++ = open a disk file for updating ( reading and writing together):
+    r+
+    w+
+    a+
+
+
+
+For deleting:
+
+import os
+
+os.remove("sample.txt")
