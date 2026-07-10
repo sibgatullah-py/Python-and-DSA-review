@@ -1,0 +1,54 @@
+--------------------------------------------
+
+## There are 4 pillars of OOP:
+    1. Inheritance
+    2. Encapsulation
+    3. Abstraction
+    4. Polymorphism
+
+--------------------------------------------
+# Abstraction: Hiding the implementation details of a class and only showing the essential features to the user.
+
+# Encapsulation: Wrapping data and functions into a single unit(object).
+
+
+
+
+At first we used to do Procedural Programming. 
+Then function came and made code reusable, removing redundancy.
+
+everything in python are objects.
+
+# A class is a blue-print for creating an object.
+
+class Student:
+    name = "Student"
+
+
+s1 = Student()
+
+*Objects are called instance or instances of a class 
+
+# Constructor
+all classes have a function called __init__(), which is always executed when an object of that class is being initiated
+
+class Car:
+    def __init__(self,name,brand,color):
+        self.name = name
+        self.brand = brand
+        self.color = color
+
+car1 = car(name,brand,color)
+
+
+
+IF we don't create a Constructor, python will automatically create a Constructor when the class is inherited  
+
+
+## STATIC METHODS (decorator)
+Methods that do not use self parameter (works at class level)
+Class level methods are called static methods
+
+*Decorators allows us to wrap another function in oder to extend the behavior of the wrapped function, without permanently modifying it.
+
+Decorators wraps around an method changes it's behavior and returns us back 
