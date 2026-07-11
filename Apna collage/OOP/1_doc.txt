@@ -52,3 +52,32 @@ Class level methods are called static methods
 *Decorators allows us to wrap another function in oder to extend the behavior of the wrapped function, without permanently modifying it.
 
 Decorators wraps around an method changes it's behavior and returns us back 
+
+
+
+# del keyword 
+Used to delete object properties or object itself.
+
+del s1
+del s1.name
+
+## Public Private:
+just adding __ before any variable or method name inside a class makes them private exclusively for that class
+
+## Inheritance:
+
+When one class(child/derived) derives the properties & methods of another class(parent/base).
+class Car:
+   ......
+
+class ToyotaCar(Car):
+    .....
+
+*There are 3 types of Inheritance:
+-> Single Inheritance
+-> Multi-level Inheritance
+-> Multiple Inheritance
+
+
+## Super method:
+*super() method is used to access methods of the parent class.
