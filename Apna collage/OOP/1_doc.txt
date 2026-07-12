@@ -29,7 +29,8 @@ s1 = Student()
 
 *Objects are called instance or instances of a class 
 
-# Constructor
+# Constructor:->
+
 all classes have a function called __init__(), which is always executed when an object of that class is being initiated
 
 class Car:
@@ -45,7 +46,8 @@ car1 = car(name,brand,color)
 IF we don't create a Constructor, python will automatically create a Constructor when the class is inherited  
 
 
-## STATIC METHODS (decorator)
+## STATIC METHODS (decorator):-------------------------------------------------------------------------------------
+
 Methods that do not use self parameter (works at class level)
 Class level methods are called static methods
 
@@ -61,10 +63,10 @@ Used to delete object properties or object itself.
 del s1
 del s1.name
 
-## Public Private:
+# Public Private:
 just adding __ before any variable or method name inside a class makes them private exclusively for that class
 
-## Inheritance:
+## Inheritance:-----------------------------------------------------------------------
 
 When one class(child/derived) derives the properties & methods of another class(parent/base).
 class Car:
@@ -81,3 +83,26 @@ class ToyotaCar(Car):
 
 ## Super method:
 *super() method is used to access methods of the parent class.
+
+
+1. static method
+2. class method (cls)
+3. instance method (self)
+
+
+@static 
+@property 
+
+
+## Polymorphism: Operator Overloading -------------------------------------------------------------------------
+
+polymorph means many faces 
+
+When the same Operator is allowed to have different meaning according to the context
+
+Operators & Dunder functions:
+    1. a+b =  a.__add__(b)
+    2. a-b =  a.__sub__(b)
+    3. a*b =  a.__mul__(b)
+    4. a/b =  a.__truediv__(b)
+    5. a%b =  a.__mod__(b)
