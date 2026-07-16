@@ -1,5 +1,12 @@
+import uuid
+import os
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 class Book:
     def __init__(self,title,author,available):
+        self.id = str(uuid.uuid1())
         self.title = title
         self.author = author
         # self.amount = amount
@@ -15,10 +22,10 @@ class Library:
     
     
     def add_book(self):
-        title = input("Title: ")
-        author = input("Author: ")
+        title = input("Title: ").lower().strip()
+        author = input("Author: ").lower().strip()
         # amount = input("Amount: ")
-        available = input("Available: ")
+        available = input("Available: ").capitalize().strip()
         new_book = Book(title,author,available)
         self.books.append(new_book)
     
@@ -43,13 +50,26 @@ class Library:
         print("Total Books: ",total)
         print("Available Books: ",available_books)
         print("Not Available Books: ",not_available)
+        
+        print('-'*15)
+        
+    def search_book(self,name):
+        for book in self.books:
+            if name == book.title:
+                print("\n--- Book Found ---")
+                print(f"ID: {book.id}")
+                print(f"Title: {book.title.title()}")
+                print(f"Author : {book.author.capitalize()}")
+                print(f"Available: {book.available.capitalize()}")
+                return # stops the searching after the book is found
+    
     
     #need to search through the library's list of book objects and compare with the title(looping over list of objects)
     def borrow_books(self,name):
         for book in self.books:
             if name == book.title and book.available == 'Yes':
                 book.available = 'No'
-                print(f"Book {book.title} has been lent.")
+                print(f"Book {book.title.title()} has been lent.")
             
         
     
@@ -58,11 +78,11 @@ class Library:
         for book in self.books:
             if name == book.title and book.available == "No":
                 book.available = "Yes"
-                print(f"Book {book.title} has been returned.")
+                print(f"Book {book.title.title()} has been returned.")
     
 '''
 Future improvements:
-1.Search by title
+1.Search by title (done)
 2.Prevent Duplicate books from entering the list
 3.Give every book a unique ID
 '''
@@ -87,21 +107,33 @@ class App:
         print("-"*30)
         
     def __show_menu(self):
-        print("\n1.Librarian\n2.Borrower")
+        print("\n1.Librarian\n2.Borrower\n3.Exit")
         
     def __handle_choice(self,choice):
         if choice == '1':
             self.rotation = True
             while self.rotation:
                 print("Librarian can Add or Show books")
-                print("1. for adding book\n2. for showing books.\n3. for exit")
+                print("1. for adding book\n2. for showing books.\n3. for searching a book\n4. for exit")
                 lchoice = input("\n-->").strip()
                 if lchoice == '1':
                     self.Library.add_book()
+                    input("\nPress Enter to return to menu...")
+                    clear_screen()
+                    
                 if lchoice == '2':
                     self.Library.show_books()
+                    input("\nPress Enter to return to menu...")
+                    clear_screen()
+                    
                 if lchoice == '3':
+                    self.Library.search_book(input("Book name: ").lower())
+                    input("\nPress Enter to return to menu...")
+                    clear_screen()
+                    
+                if lchoice == '4':
                     self.rotation = False
+
                 
         if choice == '2':
             self.rotation = True
@@ -109,10 +141,17 @@ class App:
                 print("Borrower can borrow or return books")
                 print('\n.1 for borrowing new books\n2. for returning books\n3. for exit')
                 bchoice = input('\n-->').strip()
+                
                 if bchoice == '1':
-                    self.Library.borrow_books(input("Name of the book: "))
+                    self.Library.borrow_books(input("Name of the book: ").lower())
+                    input("\nPress Enter to return to menu...")
+                    clear_screen()
+                    
                 if bchoice == '2':
-                    self.Library.return_books(input("Name of the book: "))
+                    self.Library.return_books(input("Name of the book: ").lower())
+                    input("\nPress Enter to return to menu...")
+                    clear_screen()
+                    
                 if bchoice == '3':
                     self.rotation = False
                     
