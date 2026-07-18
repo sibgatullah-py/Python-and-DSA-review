@@ -22,12 +22,32 @@ class School:
         for student in self.students:
             if id == student.id:
                 print(student)
+                return
+                
+    def edit_student(self,ID):
+        id = int(ID)
+        for student in self.students:
+            if id == student.id:
+                try:
+                    student.name = input("New name: ")
+                    student.age = input("Edited age: ")
+                    student.grade = input("New grade: ")
+                    student.roll = input("New roll: ")
+                    
+                    print(f"\nID: {id} has been updated")
+                    return
+                except:
+                    print("\nError: Age, Grade, Roll must be numbers")
+                    return
+                
+        print(f"No students found with ID: {id}")
                 
     def delete_student(self,ID):
         id = int(ID)
         for index,student in enumerate(self.students):
             if id == student.id:
                 self.students.pop(index)
+                return
                 
                 
     #Teacher methods
@@ -44,12 +64,29 @@ class School:
         for teacher in self.teachers:
             if id == teacher.id:
                 print(teacher)
+                return
+                
+    def edit_teacher(self,ID):
+        id = int(ID)
+        for teacher in self.teachers:
+            if id == teacher.id:
+                try:
+                    teacher.name = input("New name: ")
+                    teacher.subject = input("New subject: ")
+                    
+                    return
+                except:
+                    print("Inputs are not valid")
+                    return
+                
+        print(f"No teacher found on ID: {id}")
                              
     def delete_teacher(self,ID):
         id = int(ID)
         for index,teacher in enumerate(self.teachers):
             if id == teacher.id:
                 self.teachers.pop(index)
+                return
 
 
 
@@ -57,11 +94,6 @@ class School:
 
 
 
-
-
-
-    
-     
 
 
 '''
