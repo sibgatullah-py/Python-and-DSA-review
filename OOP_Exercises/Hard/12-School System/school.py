@@ -7,30 +7,49 @@ class School:
         self.name = name
         self.students = []
         self.teachers = []
-        
+    
+    #Student methods    
     def add_student(self,student):
         self.students.append(student)
-        
-    def add_teacher(self,teacher):
-        self.teachers.append(teacher)
         
     def show_students(self):
         for student in self.students:
             print(student)
+            print("\n")
             
-    def show_teachers(self):
-        for teacher in self.teachers:
-            print(teacher)
-     
-    def search_student(self,id):
+    def search_student(self,ID):
+        id = int(ID)
         for student in self.students:
             if id == student.id:
                 print(student)
                 
-    def search_teacher(self,id):
+    def delete_student(self,ID):
+        id = int(ID)
+        for index,student in enumerate(self.students):
+            if id == student.id:
+                self.students.pop(index)
+                
+                
+    #Teacher methods
+    def add_teacher(self,teacher):
+        self.teachers.append(teacher)
+              
+    def show_teachers(self):
+        for teacher in self.teachers:
+            print(teacher)
+            print("\n")
+                
+    def search_teacher(self,ID):
+        id = int(ID)
         for teacher in self.teachers:
             if id == teacher.id:
                 print(teacher)
+                             
+    def delete_teacher(self,ID):
+        id = int(ID)
+        for index,teacher in enumerate(self.teachers):
+            if id == teacher.id:
+                self.teachers.pop(index)
 
 
 

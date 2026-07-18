@@ -88,7 +88,7 @@ class Library:
 Future improvements:
 1.Search by title (done)
 2.Prevent Duplicate books from entering the list
-3.Give every book a unique ID
+3.Give every book a unique ID (done)
 '''
 
 
