@@ -16,6 +16,10 @@ class Book:
         print(f"Title: {self.title}\nAuthor: {self.author}")
         if self.available == 'Yes':
             print("Available: Yes")
+     
+     
+# Data + Method = Encapsulation
+# The methods are encapsulated inside the class
             
 class Library:
     books = []
@@ -26,7 +30,7 @@ class Library:
         author = input("Author: ").lower().strip()
         # amount = input("Amount: ")
         available = input("Available: ").capitalize().strip()
-        new_book = Book(title,author,available)
+        new_book = Book(title,author,available) # aggrigation (process of gathering separate objs in single whole collection)
         self.books.append(new_book)
     
     # will show every books even which one is available and which one isn't also the total number of available and uavailable books
@@ -90,9 +94,11 @@ Future improvements:
 
 
 class App:
+    #Composition (one object contains another object)
+    #It's called HAS-A relationship
     def __init__(self):
         self.running = True
-        self.Library = Library()
+        self.Library = Library() #App creates a LIbrary and stores it in self.Library
         
     def run(self):
         self.__show_welcome()
