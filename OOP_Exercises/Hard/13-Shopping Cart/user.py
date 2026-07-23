@@ -41,13 +41,16 @@ class Customer(User):
     def view_cart(self):
         pass
     
-    def add_to_cart(self):
+    def add_product(self):
         pass
     
-    def remove_from_cart(self):
+    def remove_product(self):
         pass
     
     def checkout(self):
+        pass
+    
+    def clear_cart(self):
         pass
     
     

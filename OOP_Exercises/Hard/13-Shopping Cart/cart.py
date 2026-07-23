@@ -12,7 +12,12 @@ class Cart:
         pass
     
     def show_cart(self):
-        pass
+        for product in self.cart:
+            print(product.id)
+            print(product.name)
+            print(product.amount)
+            print(product.price)
+            print()
     
     def total_price(self):
         pass
